@@ -6,4 +6,4 @@ que se realizarán a lo largo del semestre.
 
 ## Documentación
 - [ Taller ](https://github.com/thehastag/taller-de-estructuras-de-datos/blob/master/Practicas%20taller/README.md)
-- Trabajos
+- ~~Trabajos~~ (pendiente de actualización)
