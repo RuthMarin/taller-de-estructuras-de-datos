@@ -6,7 +6,7 @@ En esta parte del repositorio se encuentran todos los ejercicios relacionados co
 realizados semanalmente.
 
 Estas son todas las semanas de taller:
-- [x] Semana 1
+- [x] [Semana 1](https://github.com/thehastag/taller-de-estructuras-de-datos/tree/master/Practicas%20taller/Primera%20practica%20taller%20ED)
 - [ ] Semana 2
 - [ ] Semana 3
 - [ ] Semana 4
