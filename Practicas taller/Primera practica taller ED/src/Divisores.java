@@ -1,7 +1,3 @@
-/**
- * Created by bp0428 on 30/01/2019.
- */
-
 import java.util.Scanner;
 
 public class Divisores {

@@ -38,6 +38,7 @@ public class alumno {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
     public String getNombre(){
         return nombre;
     }
