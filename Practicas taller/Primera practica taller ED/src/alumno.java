@@ -7,7 +7,7 @@ public class alumno {
     private String Asignaturas[];
     private int NumAsig;
 
-    public alumno(){
+    public alumno(String marcos, String martinez_francisco){
         nombre = "";
         apellido = "";
         matricula = "";

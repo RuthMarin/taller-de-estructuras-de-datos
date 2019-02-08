@@ -7,10 +7,20 @@ public class Principal {
 
         A4.anadirAsignatura("Analisis Matematico");
         A4.anadirAsignatura("Estructura de Datos");
-        A4.mostrarAsignaturas();
+        //A4.mostrarAsignaturas();
 
-        A1.mostrarAlumno();
-        A4.mostrarAlumno();
+       // A1.mostrarAlumno();
+       // A4.mostrarAlumno();
 
+        GrupoAlumnos grupo1 = new GrupoAlumnos(20, "g1");
+        grupo1.insertarAlumno(A1);
+        grupo1.insertarAlumno(A2);
+        grupo1.insertarAlumno(A3);
+        grupo1.insertarAlumno(A4);
+        alumno Yo = new alumno("Marcos", "Martinez Francisco", "bp0428", 9.8);
+        Yo.anadirAsignatura("Estructura de datos");
+        Yo.anadirAsignatura("Taller de programacion");
+        grupo1.insertarAlumno(Yo);
+        grupo1.mostrarGrupo();
     }
 }
