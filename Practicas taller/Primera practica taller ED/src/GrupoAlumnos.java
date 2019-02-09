@@ -49,4 +49,23 @@ public class GrupoAlumnos {
         System.out.println(nombre + "\n");
         for(int i=0; i<NumAlumnos;i++) ListaAlumnos[i].mostrarAlumno();
     }
+
+    public double mediaCalif(){
+        double nota=0;
+        for(int i=0;i<NumAlumnos;i++)
+            nota += ListaAlumnos[i].getCalificacion();
+        return nota / NumAlumnos;
+    }
+
+    public void  maxCalif(){
+        double notaMax = ListaAlumnos[0].getCalificacion();
+        int pos = 0;
+        for(int i = 1; i<NumAlumnos;i++)
+            if(ListaAlumnos[i].getCalificacion() > notaMax) {
+                notaMax = ListaAlumnos[i].getCalificacion();
+                pos = i;
+            }
+        System.out.println("\nDatos del alumno con mayor calificacion del grupo:");
+        ListaAlumnos[pos].mostrarAlumno();
+    }
 }

@@ -22,5 +22,8 @@ public class Principal {
         Yo.anadirAsignatura("Taller de programacion");
         grupo1.insertarAlumno(Yo);
         grupo1.mostrarGrupo();
+        double mediaG1 = grupo1.mediaCalif();
+        System.out.println("\nLa media del grupo (" + grupo1.getNombre() + ") es --> " + grupo1.mediaCalif());
+        grupo1.maxCalif();
     }
 }
