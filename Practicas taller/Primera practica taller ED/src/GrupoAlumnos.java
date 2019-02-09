@@ -1,18 +1,20 @@
 public class GrupoAlumnos {
 
-    alumno ListaAlumnos[];
-    String nombre;
-    int Maximo, NumAlumnos;
+    private  alumno[] ListaAlumnos;
+    private  String nombre;
+    private int Maximo, NumAlumnos;
 
     public GrupoAlumnos(){
         nombre = "GrupoDesconocido";
         Maximo = 10;
+        NumAlumnos = 0;
         ListaAlumnos = new alumno[Maximo];
     }
 
     public  GrupoAlumnos(int max, String nom){
         nombre = nom;
         Maximo = max;
+        NumAlumnos = 0;
         ListaAlumnos = new alumno[Maximo];
     }
 
@@ -34,8 +36,9 @@ public class GrupoAlumnos {
     }
 
     public  boolean  insertarAlumno(alumno  a){
-        if(ListaAlumnos[Maximo-1] == null) {
+        if(NumAlumnos < Maximo) {
             ListaAlumnos[NumAlumnos] = a;
+            NumAlumnos ++;
             return true;
         }
         else
@@ -43,7 +46,7 @@ public class GrupoAlumnos {
     }
 
     public void mostrarGrupo(){
-        System.out.println(nombre);
+        System.out.println(nombre + "\n");
         for(int i=0; i<NumAlumnos;i++) ListaAlumnos[i].mostrarAlumno();
     }
 }
