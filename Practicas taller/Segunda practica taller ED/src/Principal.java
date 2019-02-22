@@ -1,16 +1,15 @@
 public class Principal {
-    private static int  sumarElementos (Pila p){
+    public static int  sumarElementos (Pila p){
 
         if(p.pilaVacia())
             return 0;
         else{
             Pila aux=p;
             return aux.sumaElementos();
-
         }
     }
     private static void unirPilas (Pila p1, Pila p2){
-        
+
     }
 
     public static void main(String[] args) {
