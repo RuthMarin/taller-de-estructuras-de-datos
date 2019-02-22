@@ -1,9 +1,23 @@
 public class Principal {
+    private static int  sumarElementos (Pila p){
+
+        if(p.pilaVacia())
+            return 0;
+        else{
+            Pila aux=p;
+            return aux.sumaElementos();
+
+        }
+    }
+    private static void unirPilas (Pila p1, Pila p2){
+        
+    }
+
     public static void main(String[] args) {
         Pila p1 = new Pila();
-        Pila p2 = new Pila();
+       /* Pila p2 = new Pila();
 
-       /* //pruebas sumar pila y pila ordenada
+        //pruebas sumar pila y pila ordenada
         p1.apilar(8);
         p1.apilar(1);
         p1.apilar(4);
@@ -22,7 +36,7 @@ public class Principal {
         p1.escribirPila();
         System.out.println("\nLa suma de los elementos de la pila es --> "+ p1.sumaElementos());
         p1.desapilar();
-        p1.sumaElementos();*/
+        p1.sumaElementos();
 
         //Pruebas unir pila
 
@@ -54,5 +68,17 @@ public class Principal {
         p22.escribirPila();
         p11.unirPila(p22);
         p11.escribirPila();
+
+        //Caso 3
+
+        p11.desapilar();
+        p11.escribirPila();
+        p11.unirPila(p22);
+        p11.escribirPila();*/
+
+       p1.apilar(5);
+       p1.apilar(5);
+       p1.apilar(5);
+       System.out.println(sumarElementos(p1));
     }
 }
