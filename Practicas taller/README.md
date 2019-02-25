@@ -18,5 +18,11 @@ Estas son todas las semanas de taller:
 - [ ] Semana 10
 
 ## Semana 1
-Práctica orientada a la introduccion del taller de la asignatura y al entorno de trabajo. En este caso Java y el IDE 
+Práctica orientada a la introduccion del taller de la asignatura, al entorno de trabajo y la programación orientada a objetos. En este caso Java y el IDE 
 IntelliJ IDEA. Se utilizan dos trozos de codigo sencillos para probar el entorno y sus diversas funciones haciendo especial incapié en el debugger
+
+## Semana 2 
+Primera práctica del taller de la asignatura en la que empezamos a trabajar con pilas y colas. La actividad de compone de dos partes para hacer incapié en cada una de las estructuras de datos (listas y colas).
+
+* Parte 1 (listas) --> trabajar el recorrido de listas dinámicas
+* ~~Parte 2 (colas)~~  --> proximamente
