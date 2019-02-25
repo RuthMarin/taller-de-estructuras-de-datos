@@ -14,7 +14,7 @@ public class Principal {
 
     public static void main(String[] args) {
         Pila p1 = new Pila();
-       /* Pila p2 = new Pila();
+        Pila p2 = new Pila();
 
         //pruebas sumar pila y pila ordenada
         p1.apilar(8);
@@ -73,11 +73,23 @@ public class Principal {
         p11.desapilar();
         p11.escribirPila();
         p11.unirPila(p22);
-        p11.escribirPila();*/
+        p11.escribirPila();
 
-       p1.apilar(5);
-       p1.apilar(5);
-       p1.apilar(5);
-       System.out.println(sumarElementos(p1));
+        //Pruebas con la funcion sumarElementos(pila)
+
+        Pila p33 = new Pila();
+
+        p33.apilar(8);
+        p33.apilar(1);
+        p33.apilar(4);
+        p33.apilar(2);
+        System.out.println("\nLa suma de la pila es: "+sumarElementos(p33));
+
+        for (int i = 0; i<3; i++)
+            p33.desapilar();
+        System.out.println("\nLa suma de la pila es: "+sumarElementos(p33));
+
+        p33.desapilar();
+        System.out.println("\nLa suma de la pila es: "+sumarElementos(p33));
     }
 }
