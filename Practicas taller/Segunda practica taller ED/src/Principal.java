@@ -13,7 +13,7 @@ public class Principal {
     }
 
     public static void main(String[] args) {
-        Pila p1 = new Pila();
+        /*Pila p1 = new Pila();
         Pila p2 = new Pila();
 
         //pruebas sumar pila y pila ordenada
@@ -90,6 +90,27 @@ public class Principal {
         System.out.println("\nLa suma de la pila es: "+sumarElementos(p33));
 
         p33.desapilar();
-        System.out.println("\nLa suma de la pila es: "+sumarElementos(p33));
+        System.out.println("\nLa suma de la pila es: "+sumarElementos(p33));*/
+
+        //Pruebas con colas dejar N elementos
+        Cola p44 = new Cola();
+
+        p44.encolar(20);
+        p44.encolar(40);
+        p44.encolar(10);
+        p44.encolar(50);
+        p44.dejarN(2);
+        p44.escribirCola();
+
+        p44.encolar(10);
+        p44.encolar(50);
+        p44.dejarN(4);
+        p44.escribirCola();
+
+        p44.dejarN(9);
+        p44.escribirCola();
+
+        p44.dejarN(0);
+        p44.escribirCola();
     }
 }
