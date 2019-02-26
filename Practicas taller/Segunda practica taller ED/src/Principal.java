@@ -12,6 +12,16 @@ public class Principal {
 
     }
 
+    public static void dejarN(int n, Cola cola){
+        if(n < cola.numElemCola() && n!=0){
+           Cola aux = new Cola();
+           for(int i = 0; i < n; i++){
+               aux.encolar(cola.desencolar());
+           }
+           cola = aux;
+        }
+    }
+
     public static void main(String[] args) {
         /*Pila p1 = new Pila();
         Pila p2 = new Pila();
@@ -112,5 +122,15 @@ public class Principal {
 
         p44.dejarN(0);
         p44.escribirCola();
+
+        //Prueba con funcion Dejar n elementos (funcion fuera main)
+        Cola p55 = new Cola();
+
+        p55.encolar(20);
+        p55.encolar(40);
+        p55.encolar(10);
+        p55.encolar(50);
+        dejarN(2,p55);
+        p55.escribirCola();
     }
 }
