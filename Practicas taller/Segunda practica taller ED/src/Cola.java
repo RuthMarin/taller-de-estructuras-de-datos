@@ -9,9 +9,9 @@ public class Cola {
     }
 
 
-    public void encolar(int v) {    // Coloca el elemento v al final de la cola
+    public void encolar(int valor) {    // Coloca el elemento v al final de la cola
         Nodo nuevo;
-        nuevo = new Nodo(v, null);
+        nuevo = new Nodo(valor, null);
         if (cabeza != null)
             fin.setSiguiente(nuevo);
         else
@@ -63,6 +63,7 @@ public class Cola {
             System.out.print(aux.getDato() + "  ");
             aux = aux.getSiguiente();
         }
+        System.out.println("");
     }
 
     public int numElemCola() {       // Devuelve el número de elementos de la cola
@@ -70,5 +71,17 @@ public class Cola {
         return numElem;
     }
 
+    void  dejarN(  int n){
+        if(n < this.numElem && n != 0){
+            Nodo aux = cabeza;
+            for(int i= 1; i < n; i++){
+                aux = aux.getSiguiente();
+            }
+            aux.setSiguiente(null);
+            this.fin = aux;
+        }
+        else if (n == 0)
+            this.cabeza = null;
+    }
 }
 
