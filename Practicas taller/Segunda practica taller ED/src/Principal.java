@@ -122,7 +122,6 @@ public class Principal {
 
         p44.dejarN(0);
         p44.escribirCola();
-<<<<<<< HEAD
 
         //Prueba con funcion Dejar n elementos (funcion fuera main)
         Cola p55 = new Cola();
@@ -133,7 +132,6 @@ public class Principal {
         p55.encolar(50);
         dejarN(2,p55);
         p55.escribirCola();
-=======
->>>>>>> 770a4592894124b05411f13d6d72f163f9e159f2
+
     }
 }
