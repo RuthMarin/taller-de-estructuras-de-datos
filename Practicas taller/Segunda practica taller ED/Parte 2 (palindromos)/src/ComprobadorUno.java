@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class ComprobadorUno {
 
-
     private String frase;
     private PilaCaracter pila1, pila2;
 

@@ -8,7 +8,6 @@ public class PilaCaracter {
         numElementos = 0;
     }
 
-
     public boolean pilaVacia() {
 
         return cimaPila == null;
@@ -47,7 +46,6 @@ public class PilaCaracter {
         }
         return valor;
     }
-
 
     public int numElemPila() {
         return numElementos;

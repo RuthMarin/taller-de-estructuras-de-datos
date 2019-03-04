@@ -44,7 +44,7 @@ public class ColaCaracter {
     }
 
 
-    public char primero() {  //Devuelve el elemento del cabeza de la cola Si la cola está vacía, devuelve como resultado -999 y un mensaje de error
+    public char primero() {  //Devuelve el elemento del cabeza de la cola Si la cola está vacía, devuelve como resultado un espacio en blanco y un mensaje de error
 
         char resul = ' ';
 
