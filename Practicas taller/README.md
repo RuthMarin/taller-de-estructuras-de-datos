@@ -25,4 +25,4 @@ IntelliJ IDEA. Se utilizan dos trozos de codigo sencillos para probar el entorno
 Primera práctica del taller de la asignatura en la que empezamos a trabajar con pilas y colas. La actividad de compone de dos partes para hacer incapié en cada una de las estructuras de datos (listas y colas).
 
 * Parte 1 (listas Y colas) --> trabajar el recorrido de listas y colas dinámicas
-* ~~Parte 2 (palindromos)~~  --> proximamente
+* Parte 2 (palindromos)  --> aplicar las listas y colas para implementar un comporbador de palíndromos
