@@ -4,18 +4,18 @@ import java.util.Stack;
 public class ComprobadorTres {
 
     private String frase;
-    private Stack pila1, pila2;
+    private Stack<Character> pila1, pila2;
 
     public ComprobadorTres(){
         frase = null;
-        pila1 = new Stack();
-        pila2 = new Stack();
+        pila1 = new Stack<>();
+        pila2 = new Stack<>();
     }
 
     public ComprobadorTres(String frase){
         this.frase = frase;
-        pila1 = new Stack();
-        pila2 = new Stack();
+        pila1 = new Stack<>();
+        pila2 = new Stack<>();
     }
 
     public void leerFrase(){
