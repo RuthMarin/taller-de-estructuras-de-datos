@@ -16,7 +16,7 @@ public class Principal {
         cp4.esPalindromo();
 
 
-        //Pruebas comprobador dos
+        /*//Pruebas comprobador dos
 
         ComprobadorDos cp21 = new ComprobadorDos("aroma a mora"), cp22 = new ComprobadorDos("camino a casa"), cp23 = new ComprobadorDos("dabale arroz a la zorra el abad") ;
 
@@ -27,7 +27,7 @@ public class Principal {
         ComprobadorDos cp24 = new ComprobadorDos();
 
         cp24.leerFrase();
-        cp24.esPalindromo();
+        cp24.esPalindromo();*/
 
 
         //Pruebas comprobador tres (clase stack)
@@ -36,5 +36,10 @@ public class Principal {
         cp31.esPalindromo();
         cp32.esPalindromo();
         cp33.esPalindromo();
+
+        ComprobadorTres cp34 = new ComprobadorTres();
+
+        cp34.leerFrase();
+        cp34.esPalindromo();
     }
 }

@@ -25,35 +25,37 @@ public class ComprobadorTres {
     }
 
     public void esPalindromo(){
-        int numero ;
-        for ( numero = 0; numero<this.frase.length(); numero++){
-            if(frase.charAt(numero) != ' '){
-                pila1.push(frase.charAt(numero));
+        int numero = 0;
+        for ( int i = 0; i<this.frase.length(); i++){
+            if(frase.charAt(i) != ' '){
+                pila1.push(frase.charAt(i));
+                numero ++;
             }
         }
 
         if(numero % 2 == 0){
-            for(int i = 0; i < numero/2; i++){
+            for(int i = 0; i < (numero/2); i++) {
                 pila2.push(pila1.pop());
             }
+            numero /= 2;
         }
         else{ //En caso de que haya un numero impar de caracteres despreciamos el impar del centro
-            for(int i = 0; i< numero/2; i++){
+            for(int i = 0; i < (numero/2); i++){
                 pila2.push(pila1.pop());
             }
             pila1.pop(); //Eliminamos el caracter del centro que nos sobra para que se queden las dos pilas iguales
+            numero /= 2;
         }
 
         boolean flag = true;
-        Stack aux1 = pila1, aux2 = pila2;
 
         while(numero > 0 && flag){
 
-            if(aux1.peek() != aux2.peek())
+            if(pila1.peek() != pila2.peek())
                 flag = false;
             else{
-                aux1.pop();
-                aux2.pop();
+                pila1.pop();
+                pila2.pop();
                 numero --;
             }
         }
