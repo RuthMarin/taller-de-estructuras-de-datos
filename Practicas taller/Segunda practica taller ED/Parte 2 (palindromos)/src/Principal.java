@@ -33,6 +33,7 @@ public class Principal {
 
 
         //Pruebas comprobador tres (clase stack)
+
         ComprobadorTres cp31 = new ComprobadorTres("aroma a mora"), cp32 = new ComprobadorTres("camino a casa") , cp33 = new ComprobadorTres("dabale arroz a la zorra el abad");
         System.out.println("\n-- Pruebas Comporbador tres --");
 
