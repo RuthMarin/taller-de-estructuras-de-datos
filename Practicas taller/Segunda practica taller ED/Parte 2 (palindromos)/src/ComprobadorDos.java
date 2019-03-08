@@ -26,8 +26,6 @@ public class ComprobadorDos {
 
     public void  esPalindromo(){
 
-        PilaCaracter PilaAux1 = new PilaCaracter(), PilaAux2 = new PilaCaracter();
-        ColaCaracter ColaAux = new ColaCaracter();
         boolean flag = true;
 
         for(int i = 0; i<this.frase.length();i++){ //Añadimos todos los caracteres de la frase a la pila auxiliar y a la cola
@@ -36,19 +34,14 @@ public class ComprobadorDos {
                 cola.encolar(frase.charAt(i));
             }
         }
-        PilaAux1 = pila;
-        int numero = pila.numElemPila();
-        for(int i = 0; i < numero; i++){ //Desapilamos la pila auxiliar en la pila principal para que tanto la cola como la pila esten ordenadas en el mismo sentido
-            PilaAux2.apilar(PilaAux1.desapilar());
-        }
+        while(cola.numElemCola() > 0 && flag) {
 
-        while(pila.numElemPila() > 0 && flag) {
-
-            if (PilaAux2.cima() != ColaAux.primero())
+            if (pila.cima() != cola.primero()) {
                 flag = false;
+            }
             else {
-                PilaAux2.desapilar();
-                ColaAux.desencolar();
+                pila.desapilar();
+                cola.desencolar();
             }
         }
         if (flag)

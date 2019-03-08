@@ -2,9 +2,10 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        //Pruebas comprobador uno
+       /* //Pruebas comprobador uno
 
         ComprobadorUno cp1 = new ComprobadorUno("aroma a mora"), cp2 = new ComprobadorUno("camino a casa"), cp3 = new ComprobadorUno("dabale arroz a la zorra el abad");
+        System.out.println("\n-- Pruebas Comporbador uno --");
 
         cp1.esPalindromo();
         cp2.esPalindromo();
@@ -13,12 +14,13 @@ public class Principal {
         ComprobadorUno cp4 = new ComprobadorUno();
 
         cp4.leerFrase();
-        cp4.esPalindromo();
+        cp4.esPalindromo();*/
 
 
-        /*//Pruebas comprobador dos
+        //Pruebas comprobador dos
 
         ComprobadorDos cp21 = new ComprobadorDos("aroma a mora"), cp22 = new ComprobadorDos("camino a casa"), cp23 = new ComprobadorDos("dabale arroz a la zorra el abad") ;
+        System.out.println("\n-- Pruebas Comporbador dos --");
 
         cp21.esPalindromo();
         cp22.esPalindromo();
@@ -27,11 +29,12 @@ public class Principal {
         ComprobadorDos cp24 = new ComprobadorDos();
 
         cp24.leerFrase();
-        cp24.esPalindromo();*/
+        cp24.esPalindromo();
 
 
-        //Pruebas comprobador tres (clase stack)
+        /*//Pruebas comprobador tres (clase stack)
         ComprobadorTres cp31 = new ComprobadorTres("aroma a mora"), cp32 = new ComprobadorTres("camino a casa") , cp33 = new ComprobadorTres("dabale arroz a la zorra el abad");
+        System.out.println("\n-- Pruebas Comporbador tres --");
 
         cp31.esPalindromo();
         cp32.esPalindromo();
@@ -40,6 +43,6 @@ public class Principal {
         ComprobadorTres cp34 = new ComprobadorTres();
 
         cp34.leerFrase();
-        cp34.esPalindromo();
+        cp34.esPalindromo();*/
     }
 }
