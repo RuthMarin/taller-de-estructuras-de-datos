@@ -2,7 +2,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
-       /* //Pruebas comprobador uno
+        //Pruebas comprobador uno
 
         ComprobadorUno cp1 = new ComprobadorUno("aroma a mora"), cp2 = new ComprobadorUno("camino a casa"), cp3 = new ComprobadorUno("dabale arroz a la zorra el abad");
         System.out.println("\n-- Pruebas Comporbador uno --");
@@ -14,7 +14,7 @@ public class Principal {
         ComprobadorUno cp4 = new ComprobadorUno();
 
         cp4.leerFrase();
-        cp4.esPalindromo();*/
+        cp4.esPalindromo();
 
 
         //Pruebas comprobador dos
@@ -32,7 +32,7 @@ public class Principal {
         cp24.esPalindromo();
 
 
-        /*//Pruebas comprobador tres (clase stack)
+        //Pruebas comprobador tres (clase stack)
         ComprobadorTres cp31 = new ComprobadorTres("aroma a mora"), cp32 = new ComprobadorTres("camino a casa") , cp33 = new ComprobadorTres("dabale arroz a la zorra el abad");
         System.out.println("\n-- Pruebas Comporbador tres --");
 
@@ -43,6 +43,6 @@ public class Principal {
         ComprobadorTres cp34 = new ComprobadorTres();
 
         cp34.leerFrase();
-        cp34.esPalindromo();*/
+        cp34.esPalindromo();
     }
 }
