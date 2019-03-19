@@ -129,16 +129,12 @@ class ListaOrdinal {
     }
 
     public void borrarAltas(){
-        Iterador iter = this.obtenerIterador();
-        Nodo anterior = inicio, aux = anterior.getSiguiente();
-        
-        while(iter.hasNext()){
-            Paciente paciente = iter.next();
-            if(paciente.estaAlta()){
-                aux2 = aux1.getSiguiente();
-                aux1.setSiguiente(aux2);
-            }
-            aux1 = aux1.getSiguiente();
+        Nodo actual = inicio;
+
+        while(actual != null){
+            if(actual.getDato().estaAlta())
+                this.borrar(actual.getDato());
+            actual = actual.getSiguiente();
         }
     }
 }
