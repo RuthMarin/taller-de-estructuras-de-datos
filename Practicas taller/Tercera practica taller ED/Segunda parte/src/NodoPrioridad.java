@@ -1,9 +1,9 @@
 public class NodoPrioridad {
     private int clave;
-    private int dato;
+    private Cola dato;
     private NodoPrioridad siguiente;
 
-    public NodoPrioridad(int clave, int dato, NodoPrioridad siguiente) {
+    public NodoPrioridad(int clave, Cola dato, NodoPrioridad siguiente) {
         this.clave = clave;
         this.dato = dato;
         this.siguiente = siguiente;
@@ -13,7 +13,7 @@ public class NodoPrioridad {
         return siguiente;
     }
 
-    public int getDato() {
+    public Cola getDato() {
         return dato;
     }
 
@@ -21,7 +21,7 @@ public class NodoPrioridad {
         this.siguiente = siguiente;
     }
 
-    public void setCola(int dato) {
+    public void setCola(Cola dato) {
         this.dato = dato;
     }
 
