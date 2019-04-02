@@ -129,12 +129,29 @@ class ListaOrdinal {
     }
 
     public void borrarAltas(){
-        Nodo actual = inicio;
+       while(inicio.getDato().estaAlta()){
+           inicio = inicio.getSiguiente();
+           numElementos--;
+       }
+       Nodo anterior = inicio;
+       Nodo actual = inicio.getSiguiente();
 
-        while(actual != null){
-            if(actual.getDato().estaAlta())
-                this.borrar(actual.getDato());
-            actual = actual.getSiguiente();
-        }
+       while(actual != null){
+           if(actual.getDato().estaAlta()){
+               if(actual == fin){
+                   fin = anterior;
+                   actual = actual.getSiguiente();
+               }
+               else {
+                   actual = actual.getSiguiente();
+                   anterior.setSiguiente(actual);
+               }
+               numElementos--;
+           }
+           else{
+               anterior = actual;
+               actual = actual.getSiguiente();
+           }
+       }
     }
 }

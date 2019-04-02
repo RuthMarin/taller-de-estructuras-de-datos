@@ -34,9 +34,11 @@ public class Aplicacion {
 
        while(iter.hasNext()){
            paciente = iter.next();
-
+           if(paciente.getSintomas().indexOf(sintoma) != -1){
+               listaAux.insertar(paciente);
+               paciente.verPaciente();
+           }
        }
-
 
        return listaAux;
    }
@@ -61,6 +63,8 @@ public class Aplicacion {
         listaPacientes.borrarAltas();
 
         verPacientes(listaPacientes);
+
+        verPacientes(pacientesSintoma(listaPacientes, "mareos"));
 
 
     }
