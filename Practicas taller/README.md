@@ -26,7 +26,7 @@ Primera práctica del taller de la asignatura en la que empezamos a trabajar con
 * Parte 1 (listas Y colas) --> trabajar el recorrido de listas y colas dinámicas
 * Parte 2 (palindromos)  --> aplicar las listas y colas para implementar un comporbador de palíndromos
 
-##Semana 3
+## Semana 3
 Segunda practica del taller de la asignatura en la que trabajaremos con listas ordinales y listas calificadas. Al igual que la semana anterior, esta practica se divide a su vez en dos sub apartados.
 
 * Parte 1 --> trajaremos y nos centraremos en las listas ordinales.
