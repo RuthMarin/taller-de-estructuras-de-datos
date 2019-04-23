@@ -1,5 +1,4 @@
-﻿Practicas taller 
-================
+#Practicas taller 
 
 ## Info
 En esta parte del repositorio se encuentran todos los ejercicios relacionados con las practicas del taller de la asignatura
@@ -8,7 +7,7 @@ realizados semanalmente.
 Estas son todas las semanas de taller:
 - [x] [Semana 1](https://github.com/thehastag/taller-de-estructuras-de-datos/tree/master/Practicas%20taller/Primera%20practica%20taller%20ED/src)
 - [x] [Semana 2](https://github.com/thehastag/taller-de-estructuras-de-datos/tree/master/Practicas%20taller/Segunda%20practica%20taller%20ED)
-- [ ] Semana 3
+- [x] [Semana 3](https://github.com/thehastag/taller-de-estructuras-de-datos/tree/master/Practicas%20taller/Tercera%20practica%20taller%20ED)
 - [ ] Semana 4
 - [ ] Semana 5
 - [ ] Semana 6
@@ -26,3 +25,9 @@ Primera práctica del taller de la asignatura en la que empezamos a trabajar con
 
 * Parte 1 (listas Y colas) --> trabajar el recorrido de listas y colas dinámicas
 * Parte 2 (palindromos)  --> aplicar las listas y colas para implementar un comporbador de palíndromos
+
+## Semana 3
+Segunda practica del taller de la asignatura en la que trabajaremos con listas ordinales y listas calificadas. Al igual que la semana anterior, esta practica se divide a su vez en dos sub apartados.
+
+* Parte 1 --> trajaremos y nos centraremos en las listas ordinales.
+* Parte 2 --> trabajaremos y nos centraremos en las listas cardinales.
