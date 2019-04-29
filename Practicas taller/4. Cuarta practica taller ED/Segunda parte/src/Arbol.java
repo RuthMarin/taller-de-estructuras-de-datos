@@ -15,7 +15,9 @@ public class Arbol {
         }
     }
     public void preOrden() {
+        System.out.println("Recorrido preOrden:");
         preOrden(raiz);
+        System.out.println("");
     }
 
     // Escribe las claves del árbol binario de raiz a en postorden.
@@ -28,7 +30,9 @@ public class Arbol {
         }
     }
     public void postOrden() {
+        System.out.println("Recorrido postOrden:");
         postOrden(raiz);
+        System.out.println("");
     }
 
     // Escribe las claves del árbol binario de raiz a en orden central.
@@ -41,7 +45,9 @@ public class Arbol {
         }
     }
     public void ordenCentral() {
+        System.out.println("Recorrido ordenCentral:");
         ordenCentral(raiz);
+        System.out.println("");
     }
 
     public void listarAmplitud() {
@@ -105,15 +111,34 @@ public class Arbol {
         return sumaArti / numOb;
     }
 
-
-    private Alumno maxCalifAux(NodoArbol nodo){
-        Alumno alumno = nodo.getDato();
-        double maxNota = alumno.getCalificacion();
-
-        
+    private Alumno maxCaliAux(NodoArbol nodo){
+        Alumno actual, aux;
+        if (nodo == null){
+            return null;
+        }
+        else{
+            actual = maxCaliAux(nodo.getIz());
+            if ( actual == null || nodo.getDato().getCalificacion() > actual.getCalificacion()){
+                actual = nodo.getDato();
+            }
+            aux = maxCaliAux(nodo.getDe());
+            if (aux != null && nodo.getDato().getCalificacion() < aux.getCalificacion()){
+                actual = aux;
+            }
+            return actual;
+        }
     }
 
-    public void maxCalif(){
-
+    public void maxCali(){
+        Alumno alumno = maxCaliAux(this.raiz);
+        if(alumno != null){
+            System.out.print("\nLa mejor calificacion es de: ");
+            alumno.mostrarAlumno();
+            System.out.println("");
+        }
+        else{
+            System.out.print("\nNo hay ninguna maxima calificacion");
+        }
     }
+
 }

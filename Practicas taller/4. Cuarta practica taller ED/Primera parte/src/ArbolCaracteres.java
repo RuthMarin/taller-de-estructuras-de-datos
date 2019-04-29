@@ -76,11 +76,11 @@ public class ArbolCaracteres {
         }
     }
 
-    private StringBuilder postordenString(NodoArbol nodo, StringBuilder cadena){
+    private StringBuilder postordenStringAux(NodoArbol nodo, StringBuilder cadena){
 
         if (nodo != null) {
-            postordenString(nodo.getIz(), cadena); // Izquierda
-            postordenString(nodo.getDe(), cadena); // Derecha
+            postordenStringAux(nodo.getIz(), cadena); // Izquierda
+            postordenStringAux(nodo.getDe(), cadena); // Derecha
             cadena.append(nodo.getClave()); // Nodo
         }
         return cadena;
@@ -88,53 +88,54 @@ public class ArbolCaracteres {
 
     public StringBuilder postOrdenString(){
         StringBuilder str = new StringBuilder();
-        return postordenString(raiz, str);
+        return postordenStringAux(raiz, str);
     }
 
-    private float calcularValor ( NodoArbol nodo){
-        MetodosAE metodos = new MetodosAE();
-        StringBuilder str = this.postOrdenString();
-        Queue<Float> cola = new LinkedList<Float>();
-        int logitud = str.length();
-        float ResulOperacion = -999;
-        for(int i = 0; i < logitud; i++){
-            if(metodos.esDigito(str.charAt(i))){
-                cola.add( (float) metodos.pasarAEntero(str.charAt(i)));
-            }
-            else if (metodos.esOperador(str.charAt(i))){
-                if(str.charAt(i) == '+'){
-                    ResulOperacion = cola.poll();
-                    while (cola.peek() != null){
-                        ResulOperacion += cola.poll();
-                    }
-                    cola.add(ResulOperacion);
-                }
-                else if(str.charAt(i) == '-'){
-                    ResulOperacion = cola.poll();
-                    while (cola.peek() != null){
-                        ResulOperacion -= cola.poll();
-                    }
-                    cola.add(ResulOperacion);
-                }
-                else if(str.charAt(i) == '*'){
-                    ResulOperacion = cola.poll();
-                    while (cola.peek() != null){
-                        ResulOperacion *= cola.poll();
-                    }
-                    cola.add(ResulOperacion);
-                }
-                else{
-                    ResulOperacion = cola.poll();
-                    while (cola.peek() != null){
-                        ResulOperacion /= cola.poll();
-                    }
-                    cola.add(ResulOperacion);
-                }
+    //Otra forma de hacer el metodo PostOrdenString (me gusta mas la forma con el stringbuilder)
+    /*
+    public String postOrdenes(){
+        String s = "";
+        s += postOrdenes(raiz);
+        return s;
+    }
+    private String postOrdenes(NodoArbol nodo){
+        String s ="";
+        if(nodo.getIz()!=null){
+            s += postOrdenes(nodo.getIz());
+        }
+        if (nodo.getDe()!=null){
+            s += postOrdenes(nodo.getDe());
+        }
+        s += nodo.getClave();
+        return s;
+    }
+     */
+
+    private float calcularValor (NodoArbol nodo){
+        MetodosAE operacion = new MetodosAE();
+        float resultado = 0;
+        if(operacion.esDigito(nodo.getClave()))
+            return operacion.pasarAEntero(nodo.getClave());
+        if(operacion.esOperador(nodo.getClave())){
+            switch (nodo.getClave()){
+                case '+':
+                    resultado = (calcularValor(nodo.getIz()) + calcularValor( nodo.getDe()));
+                    break;
+                case'-':
+                    resultado = (calcularValor(nodo.getIz()) - calcularValor( nodo.getDe()));
+                    break;
+                case'*':
+                    resultado = (calcularValor(nodo.getIz()) * calcularValor(nodo.getDe()));
+                    break;
+                case '/':
+                    resultado = (calcularValor(nodo.getIz()) / calcularValor(nodo.getDe()));
+                    break;
+                default: break;
             }
         }
 
-        return ResulOperacion;
+        return resultado;
     }
 
-    public float CalcularValor(){ return  calcularValor(raiz);}
+    public float calcularValor(){ return calcularValor(raiz); }
 }
