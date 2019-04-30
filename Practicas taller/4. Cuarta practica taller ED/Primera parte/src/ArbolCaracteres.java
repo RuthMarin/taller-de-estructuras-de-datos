@@ -112,28 +112,30 @@ public class ArbolCaracteres {
      */
 
     private float calcularValor (NodoArbol nodo){
-        MetodosAE operacion = new MetodosAE();
         float resultado = 0;
-        if(operacion.esDigito(nodo.getClave()))
-            return operacion.pasarAEntero(nodo.getClave());
-        if(operacion.esOperador(nodo.getClave())){
-            switch (nodo.getClave()){
-                case '+':
-                    resultado = (calcularValor(nodo.getIz()) + calcularValor( nodo.getDe()));
-                    break;
-                case'-':
-                    resultado = (calcularValor(nodo.getIz()) - calcularValor( nodo.getDe()));
-                    break;
-                case'*':
-                    resultado = (calcularValor(nodo.getIz()) * calcularValor(nodo.getDe()));
-                    break;
-                case '/':
-                    resultado = (calcularValor(nodo.getIz()) / calcularValor(nodo.getDe()));
-                    break;
-                default: break;
+        if(nodo != null) {
+            MetodosAE operacion = new MetodosAE();
+            if (operacion.esDigito(nodo.getClave()))
+                return operacion.pasarAEntero(nodo.getClave());
+            else if (operacion.esOperador(nodo.getClave())) {
+                switch (nodo.getClave()) {
+                    case '+':
+                        resultado = (calcularValor(nodo.getIz()) + calcularValor(nodo.getDe()));
+                        break;
+                    case '-':
+                        resultado = (calcularValor(nodo.getIz()) - calcularValor(nodo.getDe()));
+                        break;
+                    case '*':
+                        resultado = (calcularValor(nodo.getIz()) * calcularValor(nodo.getDe()));
+                        break;
+                    case '/':
+                        resultado = (calcularValor(nodo.getIz()) / calcularValor(nodo.getDe()));
+                        break;
+                    default:
+                        break;
+                }
             }
         }
-
         return resultado;
     }
 
