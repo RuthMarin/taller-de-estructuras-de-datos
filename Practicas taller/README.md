@@ -8,8 +8,8 @@ Estas son todas las semanas de taller:
 - [x] [Practica 1](https://github.com/thehastag/taller-de-estructuras-de-datos/tree/master/Practicas%20taller/Primera%20practica%20taller%20ED/src)
 - [x] [Practica 2](https://github.com/thehastag/taller-de-estructuras-de-datos/tree/master/Practicas%20taller/Segunda%20practica%20taller%20ED)
 - [x] [Practica 3](https://github.com/thehastag/taller-de-estructuras-de-datos/tree/master/Practicas%20taller/Tercera%20practica%20taller%20ED)
-- [x] Practica 4
-- [x] Practica 5
+- [x] [Practica 4](https://github.com/thehastag/taller-de-estructuras-de-datos/tree/master/Practicas%20taller/4.%20Cuarta%20practica%20taller%20ED)
+- [x] [Practica 5](https://github.com/thehastag/taller-de-estructuras-de-datos/tree/master/Practicas%20taller/5.%20Quinta%20practica%20taller%20ED/src)
 
 
 ## Practica 1
@@ -29,5 +29,7 @@ Segunda practica del taller de la asignatura en la que trabajaremos con listas o
 * Parte 2 --> trabajaremos y nos centraremos en las listas cardinales.
 
 ## Practica 4
+En esta practica trabajaremos con arboles
 
 ## Practica 5
+En esta practica nos centraremos en los grafos. En especifico grafos no dirigidos con tabla de adyacencias
