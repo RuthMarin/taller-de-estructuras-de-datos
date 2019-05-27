@@ -2,7 +2,7 @@ public class Principal {
     public static void main(String[] args){
         ArbolCaracteres arbol1,arbol2,arbol3;
         MetodosAE metodos = new MetodosAE() ;
-        StringBuilder str;
+        String str;
 
         arbol1 = metodos.notacInfija("((5+2)*(8-3))/4");
         str = arbol1.postOrdenString();

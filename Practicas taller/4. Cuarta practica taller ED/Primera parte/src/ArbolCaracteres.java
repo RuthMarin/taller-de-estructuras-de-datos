@@ -76,40 +76,18 @@ public class ArbolCaracteres {
         }
     }
 
-    private StringBuilder postordenStringAux(NodoArbol nodo, StringBuilder cadena){
-
-        if (nodo != null) {
-            postordenStringAux(nodo.getIz(), cadena); // Izquierda
-            postordenStringAux(nodo.getDe(), cadena); // Derecha
-            cadena.append(nodo.getClave()); // Nodo
+    private String postOrdenStringAux(NodoArbol nodo){
+        String string = "";
+        if(nodo != null){
+            string += postOrdenStringAux(nodo.getIz());
+            string += postOrdenStringAux(nodo.getDe());
+            string += nodo.getClave();
         }
-        return cadena;
-    }
-
-    public StringBuilder postOrdenString(){
-        StringBuilder str = new StringBuilder();
-        return postordenStringAux(raiz, str);
+        return string;
     }
 
-    //Otra forma de hacer el metodo PostOrdenString (me gusta mas la forma con el stringbuilder)
-    /*
-    public String postOrdenes(){
-        String s = "";
-        s += postOrdenes(raiz);
-        return s;
-    }
-    private String postOrdenes(NodoArbol nodo){
-        String s ="";
-        if(nodo.getIz()!=null){
-            s += postOrdenes(nodo.getIz());
-        }
-        if (nodo.getDe()!=null){
-            s += postOrdenes(nodo.getDe());
-        }
-        s += nodo.getClave();
-        return s;
-    }
-     */
+    public String postOrdenString(){ return postOrdenStringAux(raiz); }
+
 
     private float calcularValor (NodoArbol nodo){
         float resultado = 0;

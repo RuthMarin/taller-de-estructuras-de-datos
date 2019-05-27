@@ -16,6 +16,7 @@ public class Principal {
         redSocial.insertaVertice(clara);
         redSocial.insertaVertice(marcos);
 
+
         redSocial.insertaArista(0,1);
         redSocial.insertaArista(0,4);
         redSocial.insertaArista(0,5);

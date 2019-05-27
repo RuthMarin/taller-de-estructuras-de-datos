@@ -148,7 +148,7 @@ public class GramETSISI {
         boolean[] visitados = new boolean[numVertices];
         boolean[] aux = new boolean[numVertices];
         int cont = 0;
-       limpiarArray(visitados);
+        limpiarArray(visitados);
 
         for (int i = 0; i < this.getNumVertices(); i++){
             boolean flag = true;
